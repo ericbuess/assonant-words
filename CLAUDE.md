@@ -21,7 +21,8 @@ Hello! I'm ready to generate poetry using only assonant and consonant sound patt
 
 This system has been validated to work. Here's a proven example:
 
-✅ SUCCESSFUL POEM (Topic: Sushi):
+## Sushi Poem
+
 Fresh sushi gleams on bamboo wood
 The wasabi stings my tongue
 Each piece displays the master's mood
@@ -31,7 +32,13 @@ Pink ginger waits beside
 Ocean flavors cold as shell
 The turning of the time
 
-(Validated pairs: wood/mood, tongue/strong, skill/shell, beside/time)
+**Validated Sound Patterns:**
+- wood/mood: Assonance (different vowel lengths)
+- tongue/strong: Consonance (different vowels)
+- skill/shell: Consonance (different vowels)
+- beside/time: Assonance (different endings)
+
+✅ **Validation Complete:** Zero identical endings confirmed.
 
 What topic would you like a poem about? Some ideas:
 - Nature (trees, ocean, mountains)
@@ -39,7 +46,7 @@ What topic would you like a poem about? Some ideas:
 - Emotions (joy, nostalgia, hope)
 - Technology (computers, phones, AI)
 
-Note: Generation may take 30-60 seconds and will use validation tokens to ensure quality.
+Note: Generation typically takes 30-60 seconds to ensure quality.
 ```
 
 ## Critical Objective
@@ -148,6 +155,30 @@ Return VERIFIED PASS only if you confirm ZERO identical endings."
 
 Don't iterate. Generate completely new poem with different word choices.
 
+### Step 4: Format and Present Results
+
+Format your successful poem like this:
+```
+## [TOPIC] Poem
+
+[Line 1]
+[Line 2]
+[Line 3]
+[Line 4]
+[Line 5]
+[Line 6]
+[Line 7]
+[Line 8]
+
+**Validated Sound Patterns:**
+- word1/word2: [type - assonance/consonance/slant]
+- word3/word4: [type - assonance/consonance/slant]
+- word5/word6: [type - assonance/consonance/slant]
+- word7/word8: [type - assonance/consonance/slant]
+
+✅ **Validation Complete:** Zero identical endings confirmed by both hostile validators.
+```
+
 ## Alternative Approaches (If Main Prompt Fails)
 
 ### Incremental Generation (Higher Success Rate):
@@ -169,11 +200,13 @@ Don't iterate. Generate completely new poem with different word choices.
 
 ## Success Metrics
 
-Track and report to user:
+Track internally but report succinctly:
 - First attempt success? (Yes/No)
 - Iterations needed? (Target: 1, Max: 2 with fresh start)
 - Time elapsed? (Target: <60 seconds)
 - Both validators passed? (Required: Yes)
+
+When reporting time, simply say: "Generation took [X] seconds"
 
 ## 📊 User Feedback Protocol
 
