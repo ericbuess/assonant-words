@@ -265,6 +265,32 @@ Across the cosmic plane
 ```
 Validation: void/rain (near), deployed/plane (near) ✓
 
+### ✅ PROVEN SUCCESS EXAMPLE (Validated by Hostile Subagents):
+
+**Topic: Sushi**
+```
+Fresh sushi gleams on bamboo wood
+The wasabi stings my tongue
+Each piece displays the master's mood
+While soy pools dark and strong
+The master works with careful skill
+Pink ginger waits beside
+Ocean flavors cold as shell
+The turning of the time
+```
+
+**Validation Results:**
+- Layer 1 Adversarial Validator: PASS - Could not prove any identical endings despite hostile attempts
+- Layer 2 Verification Validator: VERIFIED PASS - Independently confirmed zero identical endings
+
+**Assonant-Consonant Pairs Confirmed:**
+- wood/mood: Assonance (different vowel lengths: /ʊ/ vs /uː/)
+- tongue/strong: Consonance (different vowels: /ʌ/ vs /ɔ/)
+- skill/shell: Consonance (different vowels: /ɪ/ vs /ɛ/)
+- beside/time: Assonance (different endings: /aɪd/ vs /aɪm/)
+
+**Key Achievement:** Both hostile validators tried to find identical endings but could not. The poem successfully uses only assonant/consonant patterns with 0% identical endings.
+
 ### Full Test:
 Generate 10 poems, track:
 - Success rate (target: >80%)
