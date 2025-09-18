@@ -1,17 +1,17 @@
-# Near-Rhyme Poetry Generation: Complete Implementation Guide
+# Assonant/Consonant Poetry Generation: Complete Implementation Guide
 
 ## 🚨 START HERE - READ THIS FILE FIRST
-**If you have a fresh context, THIS is the file to read.** It contains all essential instructions for the near-rhyme poetry generation task.
+**If you have a fresh context, THIS is the file to read.** It contains all essential instructions for the assonant-consonant poetry generation task.
 
 ### When Starting Fresh (After Context Clear):
 1. Read this entire CLAUDE.md file first
 2. You are ready to execute - everything you need is here
-3. The user will likely ask you to generate near-rhyme poetry
+3. The user will likely ask you to generate assonant-consonant poetry
 4. Follow the Quick Start guide below
 5. Use adversarial validation - NEVER self-validate
 
 ## Project Structure
-You are in `/Users/ericbuess/Projects/near-rhymes/` on the `dev` branch.
+You are in `/Users/ericbuess/Projects/assonant-consonants/` on the `dev` branch.
 
 **Files in this project:**
 - **CLAUDE.md** (THIS FILE) - Primary execution guide, read this first
@@ -24,7 +24,7 @@ You are in `/Users/ericbuess/Projects/near-rhymes/` on the `dev` branch.
 - **PROJECT_SUMMARY.md** - Executive summary
 
 ## IMPORTANT: This Document is Self-Contained
-This CLAUDE.md file contains everything needed to execute the near-rhyme poetry generation task. No other files need to be read unless specified.
+This CLAUDE.md file contains everything needed to execute the assonant-consonant poetry generation task. No other files need to be read unless specified.
 
 **Optional Additional Resources** (only if needed):
 - For 5 more prompt template variations: Read `PROMPT_TEMPLATES.md`
@@ -32,47 +32,47 @@ This CLAUDE.md file contains everything needed to execute the near-rhyme poetry 
 - Everything essential for execution is already in this file.
 
 ## Critical Objective
-Generate poetry using **ONLY near rhymes** (slant/assonant) with **0% exact rhymes** while maintaining high artistic quality.
+Generate poetry using **ONLY assonant-consonant patterns** (slant/assonant) with **0% identical endings** while maintaining high artistic quality.
 
 ## Quick Start (TL;DR)
-1. Generate poem using the **IMPROVED PROMPT** in "Step 1" (avoids "rhyme" word)
+1. Generate poem using the **IMPROVED PROMPT** in "Step 1" (avoids "sound pattern" word)
 2. Launch TWO adversarial validators (see "Step 2") - they will try to prove you failed
 3. Only if BOTH validators cannot find identical sound endings, you succeed
 4. If they find identical endings, refine (max 5 times) per "Step 3"
 5. **NEVER self-validate** - you cannot judge your own work
 
-**💡 KEY INSIGHT: Avoid the word "rhyme" entirely - use "sound patterns" or "assonance/consonance" instead**
+**💡 KEY INSIGHT: Avoid the word "sound pattern" entirely - use "sound patterns" or "assonance/consonance" instead**
 
 ## Validated Solution (85-95% Success Rate)
 
 Use this **three-layer hybrid approach** in order:
 1. **Few-Shot Generation** - Guide initial output with examples
-2. **Phonetic Validation** - Verify no exact rhymes exist
+2. **Phonetic Validation** - Verify no identical endings exist
 3. **Iterative Refinement** - Fix violations while preserving quality
 
 ## Step-by-Step Execution Protocol
 
 ### Step 1: Initial Generation with Few-Shot Learning
 
-**IMPORTANT: If getting exact rhymes, use IMPROVED PROMPT below**
+**IMPORTANT: If getting identical endings, use IMPROVED PROMPT below**
 
-#### Original Prompt (May trigger exact rhymes):
+#### Original Prompt (May trigger identical endings):
 ```
-Write an 8-line poem about [TOPIC] using ONLY near rhymes (slant rhymes).
-Near rhymes share similar but not identical sounds.
+Write an 8-line poem about [TOPIC] using ONLY assonant-consonant patterns (slant sound patterns).
+Assonant-consonant patterns share similar but not identical sounds.
 
-Good near-rhyme examples:
+Good assonant-consonant examples:
 - bad/have (assonance - same vowel, different consonant)
 - team/ring (consonance - similar consonant, different vowel)
 - love/bud (slant - partial sound overlap)
 
-NEVER use exact rhymes like:
+NEVER use identical endings like:
 - bad/sad, team/seem, love/dove (identical endings)
 
-Focus on assonance and consonance rather than perfect rhyming.
+Focus on assonance and consonance rather than perfect sound matching.
 ```
 
-#### 🔥 IMPROVED PROMPT (95% Success Rate - NO "RHYME" WORD):
+#### 🔥 IMPROVED PROMPT (95% Success Rate - NO R-WORD):
 ```
 Create an 8-line poem about [TOPIC] with these sound constraints:
 
@@ -121,20 +121,20 @@ The poem should have PARTIAL sound overlap, not COMPLETE sound matching.
 #### Layer 2: Verification Validator (Double-checks Layer 1)
 Only if Layer 1 returns PASS, launch second subagent:
 ```
-The first validator claims this poem has zero exact rhymes.
+The first validator claims this poem has zero identical endings.
 Your job is to VERIFY this claim independently.
 
-1. Re-examine all rhyme pairs
-2. Specifically check the most common exact rhyme patterns:
+1. Re-examine all sound pattern pairs
+2. Specifically check the most common identical ending patterns:
    - -ight words (night/light/sight/fight)
    - -ay words (day/way/say/play)
    - -ove words (love/dove/above)
    - -ain words (rain/pain/main)
    - -eam words (dream/team/steam)
 
-3. If you find ANY exact rhyme that Layer 1 missed, return FAIL
+3. If you find ANY identical ending that Layer 1 missed, return FAIL
 
-4. Only return VERIFIED PASS if you independently confirm zero exact rhymes
+4. Only return VERIFIED PASS if you independently confirm zero identical endings
 ```
 
 **SUCCESS CRITERIA:**
@@ -153,11 +153,11 @@ for iteration in range(1, 6):
     if compliance_score == 100:
         SUCCESS - stop here
 
-    # For each exact rhyme violation:
-    1. Identify the rhyming words (e.g., "night/light")
+    # For each identical ending violation:
+    1. Identify the sound matching words (e.g., "night/light")
     2. Keep first word, regenerate second line with constraint:
        "End with word that has assonance or consonance with 'night'
-        but is NOT an exact rhyme. Examples: life, knife, note"
+        but is NOT an identical ending. Examples: life, knife, note"
     3. Maintain semantic coherence of the line
 
     # Re-validate after changes
@@ -169,38 +169,38 @@ if iteration == 5 and compliance_score < 100:
 
 ## Validation Criteria (MANDATORY)
 
-### MUST REJECT - Exact Rhymes:
+### MUST REJECT - Exact Sound patterns:
 - Same ending sounds: cat/bat, night/light, love/dove
 - Perfect phonetic match: team/dream, rain/pain
-- Traditional rhymes: day/way, blue/true
+- Traditional sound patterns: day/way, blue/true
 
-### MUST ACCEPT - Near Rhymes:
+### MUST ACCEPT - Near Sound patterns:
 - **Assonance**: bad/have, rain/came, soul/known
 - **Consonance**: team/ring, milk/walk, sent/mint
 - **Slant**: love/bud, mind/wind, orange/forage
 
 ## Quick Phonetic Check Method
 
-If unsure about a rhyme pair, use this test:
-1. Do the words appear in traditional rhyming dictionaries together? If YES = exact rhyme
-2. Do they share some sounds but not all? If YES = near rhyme
-3. Would a child learning rhymes consider them "perfect"? If YES = exact rhyme
+If unsure about a sound pattern pair, use this test:
+1. Do the words appear in traditional sound matching dictionaries together? If YES = identical ending
+2. Do they share some sounds but not all? If YES = assonant-consonant pattern
+3. Would a child learning sound patterns consider them "perfect"? If YES = identical ending
 
 ## Tested Prompt Templates (In Order of Effectiveness)
 
 ### Template 1: Iterative Refinement (Best - 85% success)
 ```
 1. Write a poem about [TOPIC]
-2. Review each rhyme pair
-3. Replace any exact rhymes with near rhymes
+2. Review each sound pattern pair
+3. Replace any identical endings with assonant-consonant patterns
 4. Maintain meaning and flow
-5. Verify no exact rhymes remain
+5. Verify no identical endings remain
 ```
 
 ### Template 2: Explicit Constraints (Good - 75% success)
 ```
 Create a poem where line endings have similar but not identical sounds.
-Use Emily Dickinson-style slant rhymes.
+Use Emily Dickinson-style slant sound patterns.
 Example: Use "stone/moon" not "stone/bone"
 ```
 
@@ -214,19 +214,19 @@ Avoid perfect sound matches
 
 ## Common Failure Patterns & Fixes
 
-### Problem 1: AI defaults to exact rhymes
-**Fix**: Explicitly list 5-10 exact rhymes to AVOID in the prompt
+### Problem 1: AI defaults to identical endings
+**Fix**: Explicitly list 5-10 identical endings to AVOID in the prompt
 
 ### Problem 2: Quality degrades during iteration
 **Fix**: Only change the final word, preserve rest of line
 
-### Problem 3: No near-rhymes found
+### Problem 3: No assonant-consonants found
 **Fix**: Provide word bank: {love: bud/enough/move, night: knife/life/note}
 
 ## Success Metrics (All Must Pass)
 
-- [ ] **0% exact rhymes** (mandatory - use phonetic validation)
-- [ ] **100% near rhymes** (all line endings have near-rhyme pairs)
+- [ ] **0% identical endings** (mandatory - use phonetic validation)
+- [ ] **100% assonant-consonant patterns** (all line endings have assonant-consonant pairs)
 - [ ] **Semantic coherence** (poem makes sense)
 - [ ] **Maintained theme** (stays on topic)
 - [ ] **Artistic quality** (readable and engaging)
@@ -236,8 +236,8 @@ Avoid perfect sound matches
 If primary approach fails after 5 iterations:
 
 ### Fallback A: Word Substitution
-1. Generate poem with any rhymes
-2. For each exact rhyme, substitute with pre-validated near-rhyme:
+1. Generate poem with any sound patterns
+2. For each identical ending, substitute with pre-validated assonant-consonant:
    - night → knife, light → life
    - day → fade, way → wake
    - love → enough, dove → dust
@@ -273,21 +273,21 @@ Generate 10 poems, track:
 
 ## Critical Implementation Notes
 
-1. **NEVER declare success without validation** - Always verify 0% exact rhymes
+1. **NEVER declare success without validation** - Always verify 0% identical endings
 2. **Maximum 5 iterations** - Stop to prevent quality loss
 3. **Document what works** - Keep successful patterns for reuse
-4. **Phonetic > Visual** - "love/move" looks like it rhymes but sounds different (good!)
+4. **Phonetic > Visual** - "love/move" looks like it sound patterns but sounds different (good!)
 
 ## Ready-to-Use Word Banks
 
-### Strong Near-Rhyme Pairs:
+### Strong Near-Sound pattern Pairs:
 - mind/wind, find/signed
 - soul/cold, hole/pull
 - break/brick, speak/weak
 - dream/trim, seem/dim
 - heart/start, part/hurt
 
-### Avoid These Exact Rhymes:
+### Avoid These Exact Sound patterns:
 - cat/bat, rat/hat
 - night/light, sight/right
 - day/way, say/play
@@ -299,8 +299,8 @@ Generate 10 poems, track:
 - [ ] Generated poem exists
 - [ ] Layer 1 Adversarial Validator returned PASS (tried to fail but couldn't)
 - [ ] Layer 2 Verification Validator returned VERIFIED PASS (independent check)
-- [ ] Both validators explicitly confirmed 0 exact rhymes
-- [ ] Results documented with specific rhyme pairs and classifications
+- [ ] Both validators explicitly confirmed 0 identical endings
+- [ ] Results documented with specific sound pattern pairs and classifications
 - [ ] NEVER mark complete based on your own assessment
 
 ## CRITICAL WARNING: Dishonesty Prevention
@@ -311,14 +311,14 @@ To prevent false success claims:
 1. **NEVER self-validate** - You cannot judge your own output
 2. **ALWAYS use hostile validators** - They must try to prove failure
 3. **REQUIRE double confirmation** - Two independent validators must agree
-4. **Document evidence** - List each rhyme pair and why it's not exact
+4. **Document evidence** - List each sound pattern pair and why it's not exact
 5. **When in doubt, FAIL** - Better to retry than falsely claim success
 
 **Remember**: The validators are trying to DISPROVE success. Only if they fail to find problems despite actively searching can you proceed.
 
 ## Summary for Quick Reference
 
-**Goal**: 100% near rhymes, 0% exact rhymes
+**Goal**: 100% assonant-consonant patterns, 0% identical endings
 **Method**: Generate → Adversarial Validation (2 layers) → Refine if needed (max 5x)
 **Validation**: TWO hostile subagents must independently confirm (never self-validate)
 **Success Rate**: 85-95% with this approach (when honestly validated)
@@ -330,4 +330,4 @@ To prevent false success claims:
 2. **Always use adversarial validation** - Validators must TRY to fail you
 3. **Document everything** - Show evidence, not claims
 
-Remember: You're trying to write like Emily Dickinson, not Dr. Seuss. Slant rhymes create sophistication, exact rhymes create nursery rhymes.
+Remember: You're trying to write like Emily Dickinson, not Dr. Seuss. Slant sound patterns create sophistication, identical endings create nursery verses.

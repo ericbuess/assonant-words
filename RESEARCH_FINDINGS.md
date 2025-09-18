@@ -1,32 +1,32 @@
-# Research Findings: Near-Rhyme Poetry Generation Implementation Strategies
+# Research Findings: Near-Sound pattern Poetry Generation Implementation Strategies
 
 ## Executive Summary
 
-This comprehensive research explores practical implementation strategies for near-rhyme poetry generation, covering both prompt engineering techniques and technical implementation approaches. The findings include Python libraries for phonetic analysis, multi-agent systems, iterative refinement strategies, template-based generation methods, and scoring systems for rhyme quality evaluation.
+This comprehensive research explores practical implementation strategies for assonant-consonant poetry generation, covering both prompt engineering techniques and technical implementation approaches. The findings include Python libraries for phonetic analysis, multi-agent systems, iterative refinement strategies, template-based generation methods, and scoring systems for sound pattern quality evaluation.
 
 ## Key Research Areas
 
-### 1. How to Write Prompts that Enforce Near/Slant Rhymes and Prevent Exact Rhymes
+### 1. How to Write Prompts that Enforce Near/Slant Sound patterns and Prevent Exact Sound patterns
 
 #### Current State
-- Most AI poetry generators default to perfect rhymes unless specifically instructed otherwise
-- Modern generators offer "rhyme strictness" controls with options ranging from "only perfect rhymes" to "exclusively slant rhymes"
-- GPT-2 and similar models tend to lose "will to rhyme" over longer sequences, starting with perfect rhymes then degrading
+- Most AI poetry generators default to perfect matchs unless specifically instructed otherwise
+- Modern generators offer "sound pattern strictness" controls with options ranging from "only perfect matchs" to "exclusively slant sound patterns"
+- GPT-2 and similar models tend to lose "will to sound pattern" over longer sequences, starting with perfect matchs then degrading
 
 #### Successful Techniques Found
-- **Rhyme Strictness Sliders**: Modern tools offer control levels:
-  - "No, use only perfect rhymes"
-  - "Occasional slant rhymes"
-  - "Balanced mix of perfect and slant rhymes"
-  - "Mostly slant rhymes for subtlety"
-  - "Exclusively slant rhymes for modern effect"
+- **Sound pattern Strictness Sliders**: Modern tools offer control levels:
+  - "No, use only perfect matchs"
+  - "Occasional slant sound patterns"
+  - "Balanced mix of perfect and slant sound patterns"
+  - "Mostly slant sound patterns for subtlety"
+  - "Exclusively slant sound patterns for modern effect"
 
-- **Free Verse Specification**: Using "free verse" in prompts immediately produces poems with no rhyme scheme
-- **Explicit Structural Requirements**: Specifying exact rhyme patterns (e.g., "ABAB CDCD EFEF GG") helps control rhyming behavior
+- **Free Verse Specification**: Using "free verse" in prompts immediately produces poems with no sound pattern scheme
+- **Explicit Structural Requirements**: Specifying identical ending patterns (e.g., "ABAB CDCD EFEF GG") helps control sound matching behavior
 
 #### Challenges Identified
-- **Limited Negative Prompting**: Unlike image generation, there's minimal documentation of successful negative prompting for poetry (e.g., "avoid perfect rhymes")
-- **Phonetic Ignorance**: Language models treat words as character strings rather than sounds, making nuanced rhyme control difficult
+- **Limited Negative Prompting**: Unlike image generation, there's minimal documentation of successful negative prompting for poetry (e.g., "avoid perfect matchs")
+- **Phonetic Ignorance**: Language models treat words as character strings rather than sounds, making nuanced sound pattern control difficult
 - **Constraint Satisfaction**: Adding multiple constraints can exponentially increase generation time
 
 ### 2. Examples of Successful Prompts for Constrained Poetry Generation
@@ -40,7 +40,7 @@ Emotional tone: [specific mood]
 Key imagery: [concrete details]
 Form type: [sonnet/free verse/etc.]
 Length: [number of lines]
-Rhyme scheme: [specific pattern or "slant rhymes only"]
+Sound pattern scheme: [specific pattern or "slant sound patterns only"]
 Language level: [formal/informal/etc.]
 Literary devices: [alliteration/assonance/etc.]
 ```
@@ -48,7 +48,7 @@ Literary devices: [alliteration/assonance/etc.]
 **Concrete Examples from Research:**
 - "Summer evenings at grandma's house" (concrete details work better than just "summer")
 - "Write a romantic poem about a mouse's love for feta cheese" (specificity improves output)
-- "14 lines in iambic pentameter - ABAB CDCD EFEF GG rhyme scheme" (structural specificity)
+- "14 lines in iambic pentameter - ABAB CDCD EFEF GG sound pattern scheme" (structural specificity)
 
 **Sound Pattern Specifications:**
 - "Alliteration: repeated consonant sounds for rhythm and emphasis"
@@ -62,34 +62,34 @@ Literary devices: [alliteration/assonance/etc.]
 - **Indirect Approaches**: Most successful "negative" control uses positive specifications rather than explicit negatives
 
 #### Potential Approaches (Inferred from Research)
-- Specify "free verse" to avoid all rhyming
-- Use "subtle rhymes only" instead of "no perfect rhymes"
+- Specify "free verse" to avoid all sound matching
+- Use "subtle sound patterns only" instead of "no perfect matchs"
 - Provide counter-examples in few-shot learning scenarios
 - Use iterative refinement with validation loops
 
 #### Technical Constraints
 - Language models process text as probability distributions of character sequences
-- Rhyme detection requires phonetic analysis that most models don't inherently possess
+- Sound pattern detection requires phonetic analysis that most models don't inherently possess
 - Constraint satisfaction becomes exponentially difficult with multiple restrictions
 
-### 4. Few-Shot Learning Examples for Near-Rhyme Poetry
+### 4. Few-Shot Learning Examples for Near-Sound pattern Poetry
 
 #### Effective Few-Shot Strategies
 - **Demonstration-Based Learning**: Few-shot prompting serves as in-context learning where examples guide model behavior
-- **Structural Examples**: Providing examples of desired rhyme schemes helps models understand patterns
+- **Structural Examples**: Providing examples of desired sound pattern schemes helps models understand patterns
 - **Counter-Examples**: Including both good and bad examples can improve discrimination
 
 #### Template Structure for Few-Shot Learning
 ```
-Here are examples of poems using only near/slant rhymes:
+Here are examples of poems using only near/slant sound patterns:
 
 Example 1:
-[poem with near rhymes like "love/bud", "team/ring"]
+[poem with assonant-consonant patterns like "love/bud", "team/ring"]
 
 Example 2:
-[another example demonstrating slant rhymes]
+[another example demonstrating slant sound patterns]
 
-Now write a similar poem about [topic] using only near rhymes, avoiding perfect rhymes like "love/dove" or "night/light":
+Now write a similar poem about [topic] using only assonant-consonant patterns, avoiding perfect matchs like "love/dove" or "night/light":
 ```
 
 #### Challenges with Few-Shot Approaches
@@ -101,17 +101,17 @@ Now write a similar poem about [topic] using only near rhymes, avoiding perfect 
 
 #### Identified Failure Patterns
 
-**1. Rhyme Degradation**
-- **Problem**: Models start with good rhyming then degrade into "confused gibberish"
+**1. Sound pattern Degradation**
+- **Problem**: Models start with good sound matching then degrade into "confused gibberish"
 - **Solution**: Shorter generation segments with validation checkpoints
 
-**2. Overly Simple Rhymes**
-- **Problem**: AI produces "jingly and jangly" perfect rhymes
-- **Solution**: Specify crossing parts of speech for rhymes; avoid all monosyllabic nouns at line ends
+**2. Overly Simple Sound patterns**
+- **Problem**: AI produces "jingly and jangly" perfect matchs
+- **Solution**: Specify crossing parts of speech for sound patterns; avoid all monosyllabic nouns at line ends
 
 **3. Syntax Distortion**
-- **Problem**: Forced rhymes create awkward sentence structures
-- **Solution**: Use balanced mix of perfect and slant rhymes; prioritize meaning over perfect rhyme
+- **Problem**: Forced sound patterns create awkward sentence structures
+- **Solution**: Use balanced mix of perfect and slant sound patterns; prioritize meaning over perfect match
 
 **4. Loss of Constraint Adherence**
 - **Problem**: Models forget constraints in longer generations
@@ -127,59 +127,59 @@ Now write a similar poem about [topic] using only near rhymes, avoiding perfect 
 
 #### CMU Pronouncing Dictionary
 - **Coverage**: 134,000+ words with ARPAbet phoneme mappings
-- **Rhyme Detection**: Focus on stressed syllables and "rhyming parts"
+- **Sound pattern Detection**: Focus on stressed syllables and "sound matching parts"
 - **Implementation**: Python libraries like `pronouncing` provide simple interfaces
-- **Slant Rhyme Logic**: Compare vowels and final consonants while allowing intermediate consonant variation
+- **Slant Sound pattern Logic**: Compare vowels and final consonants while allowing intermediate consonant variation
 
-#### Advanced Rhyme Detection
+#### Advanced Sound pattern Detection
 - **Multi-syllabic Matching**: Improved sonic quality when multiple stressed syllables match
-- **Internal Rhymes**: Perfect rhymes not occurring at line ends (e.g., "cigar" and "disregarded")
+- **Internal Sound patterns**: Perfect sound patterns not occurring at line ends (e.g., "cigar" and "disregarded")
 - **Phonetic Distance**: Threshold-based comparison of phone positions in vowel/consonant space
 
 ### Validation Strategies
 
 #### Real-Time Constraint Checking
 - Convert generated text to phonemes using tools like Phonemizer
-- Apply CMU Dictionary lookups for rhyme part extraction
-- Calculate phonetic distances for slant rhyme validation
+- Apply CMU Dictionary lookups for sound pattern part extraction
+- Calculate phonetic distances for slant sound pattern validation
 - Implement iterative refinement loops for constraint violations
 
 #### Multi-Agent Approaches
 - Generation agent creates initial content
-- Validation agent checks rhyme constraints
+- Validation agent checks sound pattern constraints
 - Refinement agent suggests improvements
 - Quality assessment agent evaluates overall coherence
 
 ## Practical Prompt Templates for Testing
 
-### Template 1: Explicit Near-Rhyme Instruction
+### Template 1: Explicit Near-Sound pattern Instruction
 ```
-Write a 8-line poem about [TOPIC] using only near rhymes or slant rhymes.
-Avoid perfect rhymes like "night/light" or "love/dove".
+Write a 8-line poem about [TOPIC] using only assonant-consonant patterns or slant sound patterns.
+Avoid perfect matchs like "night/light" or "love/dove".
 Instead use subtle sound relationships like "love/bud" or "team/ring".
 Focus on assonance (similar vowel sounds) and consonance (similar consonant sounds).
 ```
 
 ### Template 2: Few-Shot Learning Approach
 ```
-Here are examples of poems using only near/slant rhymes:
+Here are examples of poems using only near/slant sound patterns:
 
 The morning light felt strange and new,
 While shadows danced in patterns broad.
 I walked through streets both old and blue,
 Seeking some forgotten word.
 
-Now write a similar 4-line poem about [TOPIC] using the same near-rhyme style.
-Avoid perfect rhymes. Use subtle sound connections instead.
+Now write a similar 4-line poem about [TOPIC] using the same assonant-consonant style.
+Avoid perfect matchs. Use subtle sound connections instead.
 ```
 
 ### Template 3: Negative Constraint with Positive Guidance
 ```
-Write a poem about [TOPIC] that uses interesting sound patterns but avoids obvious perfect rhymes.
-Instead of rhyming "day/way" or "love/dove", use more subtle connections like:
+Write a poem about [TOPIC] that uses interesting sound patterns but avoids obvious perfect matchs.
+Instead of sound matching "day/way" or "love/dove", use more subtle connections like:
 - Assonance: similar vowel sounds (home/stone)
 - Consonance: similar consonant endings (milk/walk)
-- Slant rhymes: partial sound matches (mind/kind becomes mind/send)
+- Slant sound patterns: partial sound matches (mind/kind becomes mind/send)
 ```
 
 ### Template 4: Technical Specification
@@ -187,31 +187,31 @@ Instead of rhyming "day/way" or "love/dove", use more subtle connections like:
 Generate a poem with these constraints:
 - Topic: [TOPIC]
 - Length: 8 lines
-- Rhyme scheme: ABAB CDCD (but using only slant/near rhymes)
-- No perfect rhymes (identical rime structures)
-- Acceptable: assonance, consonance, visual rhymes
+- Sound pattern scheme: ABAB CDCD (but using only slant/assonant-consonant patterns)
+- No perfect matchs (identical rime structures)
+- Acceptable: assonance, consonance, visual sound patterns
 - Maintain natural syntax and meaning
 ```
 
 ### Template 5: Iterative Refinement
 ```
-Write a poem about [TOPIC]. After each attempt, I'll check for perfect rhymes.
-If any perfect rhymes are found, replace them with near rhymes while maintaining meaning.
+Write a poem about [TOPIC]. After each attempt, I'll check for perfect matchs.
+If any perfect matchs are found, replace them with assonant-consonant patterns while maintaining meaning.
 Example substitutions:
 - "night/light" → "night/dream"
 - "love/dove" → "love/warmth"
-Continue until only near/slant rhymes remain.
+Continue until only near/slant sound patterns remain.
 ```
 
 ## Recommended Implementation Strategy
 
 Based on research findings, the most promising approach combines:
 
-1. **Few-shot learning** with curated near-rhyme examples
+1. **Few-shot learning** with curated assonant-consonant examples
 2. **Explicit constraint specification** in prompts
 3. **Iterative validation loops** using phonetic analysis
 4. **Multi-agent architecture** for generation and validation
-5. **CMU Dictionary integration** for rhyme classification
+5. **CMU Dictionary integration** for sound pattern classification
 
 The research reveals significant gaps in current practice, particularly around negative prompting for poetry generation. This suggests an opportunity for innovation in developing more sophisticated constraint satisfaction approaches specifically for poetic generation.
 
@@ -220,7 +220,7 @@ The research reveals significant gaps in current practice, particularly around n
 1. **Limited negative prompting documentation** for poetry vs. image generation
 2. **Lack of phonetic awareness** in most language models
 3. **Insufficient constraint satisfaction methods** for complex poetic forms
-4. **Missing benchmarks** for evaluating near-rhyme quality
+4. **Missing benchmarks** for evaluating assonant-consonant quality
 5. **Limited multi-modal approaches** combining generation with validation
 
 These gaps represent opportunities for novel research and development in constrained poetry generation systems.
@@ -238,8 +238,8 @@ These gaps represent opportunities for novel research and development in constra
 - **Key Features**:
   - Simple interface for CMU Pronouncing Dictionary
   - No external dependencies
-  - Direct rhyme detection: `pronouncing.rhymes("climbing")`
-  - Returns perfect rhymes by default (needs modification for near-rhymes)
+  - Direct sound pattern detection: `pronouncing.sound patterns("climbing")`
+  - Returns perfect matchs by default (needs modification for assonant-consonants)
   - BSD licensed, easy installation
 
 #### **2. CMUdict**
@@ -276,13 +276,13 @@ These gaps represent opportunities for novel research and development in constra
   - Libraries used: pandas, numpy, scikit-learn
 - **Application**: Sound analogies and phonetic transformations for poetic analysis
 
-## Near-Rhyme Detection Algorithms
+## Near-Sound pattern Detection Algorithms
 
 ### Core Detection Methods
 
-#### **Slant Rhyme Detection (from Rhyme-Highlighter)**
+#### **Slant Sound pattern Detection (from Sound pattern-Highlighter)**
 ```python
-def detect_slant_rhymes(word1, word2):
+def detect_slant_sound patterns(word1, word2):
     phones1 = phones_for_word(word1)
     phones2 = phones_for_word(word2)
     # Compare last 2 phonemes for similarity
@@ -292,13 +292,13 @@ def detect_slant_rhymes(word1, word2):
 #### **Edit Distance on Phonemes**
 - Apply Levenshtein distance to phonetic representations
 - Weight different phonetic features (vowels vs consonants)
-- Use threshold-based classification for near vs exact rhymes
+- Use threshold-based classification for near vs identical endings
 
 #### **Feature-Based Classification**
 - **Assonance**: Similar vowel sounds, different consonants (bad:have)
 - **Consonance**: Similar consonant sounds, different vowels (team:ring)
-- **Slant Rhymes**: Partial phonetic overlap (love:bud)
-- **Visual Rhymes**: Similar spelling, different pronunciation
+- **Slant Sound patterns**: Partial phonetic overlap (love:bud)
+- **Visual Sound patterns**: Similar spelling, different pronunciation
 
 ### Phonetic Similarity Algorithms
 
@@ -335,7 +335,7 @@ def detect_slant_rhymes(word1, word2):
 - Some grammatical errors but higher creativity
 
 ##### **Prompting-Based Agents (GPT-3, GPT-4)**
-- Focus excessively on perfect rhymes (problematic for our use case)
+- Focus excessively on perfect matchs (problematic for our use case)
 - Similar beginning phrases across outputs
 - Better grammar but less diversity
 - Poor understanding of poetry in zero-shot settings
@@ -359,11 +359,11 @@ def detect_slant_rhymes(word1, word2):
   - **Feedback Agent**: Evaluates and suggests improvements
 - **Application**: Adaptable to poetry generation tasks with iterative refinement
 
-### Proposed Multi-Agent Architecture for Near-Rhyme Poetry
+### Proposed Multi-Agent Architecture for Near-Sound pattern Poetry
 
 #### **Agent Role Distribution**
 1. **Generator Agent**: Creates initial poetry drafts based on prompts
-2. **Validator Agent**: Checks for exact vs near rhymes using phonetic analysis
+2. **Validator Agent**: Checks for exact vs assonant-consonant patterns using phonetic analysis
 3. **Refiner Agent**: Suggests improvements for failed constraint adherence
 4. **Scorer Agent**: Evaluates overall quality, consistency, and artistic merit
 
@@ -390,10 +390,10 @@ def detect_slant_rhymes(word1, word2):
 1. **Generate**: Create draft from keywords/topics only
 2. **Retrieve**: Find similar lines/patterns from poetry corpus
 3. **Refine**: Combine draft with retrieved patterns for improvement
-4. **Validate**: Check rhyme constraints and quality metrics
+4. **Validate**: Check sound pattern constraints and quality metrics
 5. **Iterate**: Repeat process until constraints satisfied
 
-## Scoring and Ranking Systems for Rhyme Quality
+## Scoring and Ranking Systems for Sound pattern Quality
 
 ### Traditional NLP Evaluation Metrics
 
@@ -414,10 +414,10 @@ def detect_slant_rhymes(word1, word2):
 
 ### Poetry-Specific Evaluation Metrics
 
-#### **Rhyme Accuracy Metrics**
-- **Exact Rhyme Detection**: Binary classification (must be 0% for our use case)
-- **Near Rhyme Quality**: Scoring phonetic similarity (0-1 scale)
-- **Pattern Consistency**: Adherence to intended rhyme scheme throughout poem
+#### **Sound pattern Accuracy Metrics**
+- **Exact Sound pattern Detection**: Binary classification (must be 0% for our use case)
+- **Near Sound pattern Quality**: Scoring phonetic similarity (0-1 scale)
+- **Pattern Consistency**: Adherence to intended sound pattern scheme throughout poem
 
 #### **Formal Poetry Metrics**
 - **Meter Compliance**: Stress pattern accuracy and consistency
@@ -426,7 +426,7 @@ def detect_slant_rhymes(word1, word2):
 
 #### **Russian Poetry Scansion Tool (RPST) Example**
 - **Technicality Score**: 0-1 scale for meter compliance
-- **Rhyme Detection**: Including fuzzy/slant rhymes
+- **Sound pattern Detection**: Including fuzzy/slant sound patterns
 - **Defect Identification**: Prosodic irregularities and violations
 - **Use Cases**: Data filtering and output ranking before presentation
 
@@ -440,10 +440,10 @@ def detect_slant_rhymes(word1, word2):
 
 #### **Automated Quality Assessment Framework**
 ```python
-def score_near_rhyme_poem(poem):
+def score_near_sound pattern_poem(poem):
     scores = {
-        "rhyme_compliance": check_no_exact_rhymes(poem),
-        "near_rhyme_quality": score_phonetic_similarity(poem),
+        "sound pattern_compliance": check_no_exact_sound patterns(poem),
+        "near_sound pattern_quality": score_phonetic_similarity(poem),
         "semantic_coherence": evaluate_meaning_consistency(poem),
         "formal_structure": check_meter_and_syllables(poem),
         "lexical_diversity": calculate_vocabulary_richness(poem)
@@ -456,13 +456,13 @@ def score_near_rhyme_poem(poem):
 ### Recommended Technology Stack
 
 #### **Core Libraries for Production Use**
-1. **Pronouncing**: CMU dictionary access and basic rhyme detection
+1. **Pronouncing**: CMU dictionary access and basic sound pattern detection
 2. **PyPhonetics**: Advanced phonetic similarity algorithms
 3. **Jellyfish**: String similarity and distance metrics for backup
 4. **Langroid**: Multi-agent framework for LLM coordination
 
 #### **Supporting Tools**
-1. **Rich**: Terminal visualization for rhyme pattern highlighting
+1. **Rich**: Terminal visualization for sound pattern pattern highlighting
 2. **NLTK/spaCy**: NLP preprocessing and linguistic analysis
 3. **Transformers**: LLM integration and text generation
 4. **Evaluate**: Automated metric calculation and assessment
@@ -470,25 +470,25 @@ def score_near_rhyme_poem(poem):
 ### Architecture Pattern: Layered Validation System
 
 ```python
-class NearRhymeValidator:
+class NearSound patternValidator:
     def __init__(self):
-        self.exact_rhyme_detector = ExactRhymeDetector()
-        self.near_rhyme_scorer = NearRhymeScorer()
+        self.exact_sound pattern_detector = ExactSound patternDetector()
+        self.near_sound pattern_scorer = NearSound patternScorer()
         self.quality_assessor = QualityAssessor()
 
     def validate_poem(self, poem):
-        # Layer 1: Reject exact rhymes (hard constraint)
-        if self.exact_rhyme_detector.has_exact_rhymes(poem):
-            return False, "Contains exact rhymes - regeneration required"
+        # Layer 1: Reject identical endings (hard constraint)
+        if self.exact_sound pattern_detector.has_exact_sound patterns(poem):
+            return False, "Contains identical endings - regeneration required"
 
-        # Layer 2: Score near rhyme quality
-        near_score = self.near_rhyme_scorer.score(poem)
+        # Layer 2: Score assonant-consonant pattern quality
+        near_score = self.near_sound pattern_scorer.score(poem)
 
         # Layer 3: Overall quality assessment
         quality_score = self.quality_assessor.evaluate(poem)
 
         return True, {
-            "near_rhyme_score": near_score,
+            "near_sound pattern_score": near_score,
             "quality_score": quality_score,
             "overall_rating": (near_score + quality_score) / 2
         }
@@ -500,7 +500,7 @@ class NearRhymeValidator:
 1. **Phonetic Caching**: Pre-compute phonetic representations for common words
 2. **Similarity Indexing**: Build phonetic similarity indices for fast lookup
 3. **Parallel Processing**: Multi-threaded validation for longer texts
-4. **Early Termination**: Stop processing immediately on exact rhyme detection
+4. **Early Termination**: Stop processing immediately on identical ending detection
 
 ## Validation and Testing Approaches
 
@@ -509,12 +509,12 @@ class NearRhymeValidator:
 #### **Known Examples Database**
 ```python
 test_cases = {
-    "exact_rhymes": [
+    "exact_sound patterns": [
         ("cat", "bat"),      # Should FAIL validation
         ("love", "dove"),    # Should FAIL validation
         ("night", "light"),  # Should FAIL validation
     ],
-    "near_rhymes": [
+    "near_sound patterns": [
         ("bad", "have"),     # Should PASS validation
         ("team", "ring"),    # Should PASS validation
         ("love", "bud"),     # Should PASS validation
@@ -560,8 +560,8 @@ test_cases = {
 ### Implementation Strategy: Incremental Development
 
 #### **Development Phases**
-1. **Phase 1**: Implement simple exact rhyme detection and rejection
-2. **Phase 2**: Add basic near-rhyme classification algorithms
+1. **Phase 1**: Implement simple identical ending detection and rejection
+2. **Phase 2**: Add basic assonant-consonant classification algorithms
 3. **Phase 3**: Integrate multi-agent validation system
 4. **Phase 4**: Implement comprehensive quality scoring systems
 5. **Phase 5**: Add iterative refinement loops with learning
@@ -578,7 +578,7 @@ test_cases = {
 
 #### **PoetryDiffusion (AAAI 2024)**
 - **Focus**: Joint semantic and metrical manipulation in poetry generation
-- **Application**: Could be adapted for rhyme constraint satisfaction
+- **Application**: Could be adapted for sound pattern constraint satisfaction
 
 #### **GPT Czech Poet (2024)**
 - **Author**: Chudoba and Rosa
@@ -588,15 +588,15 @@ test_cases = {
 ### Future Research Directions
 
 #### **Technical Advancement Opportunities**
-1. **Cross-lingual Near-Rhyme**: Extend algorithms beyond English
-2. **Cultural Context Integration**: Incorporate cultural rhyming traditions
+1. **Cross-lingual Near-Sound pattern**: Extend algorithms beyond English
+2. **Cultural Context Integration**: Incorporate cultural sound matching traditions
 3. **Personalization**: Adapt to individual poetic styles and preferences
 4. **Real-time Interactive Generation**: Live poetry creation tools
 
 #### **Advanced Technical Enhancements**
-1. **Neural Rhyme Detection**: Transformer-based phonetic similarity models
-2. **Semantic Preservation**: Maintain meaning while applying rhyme constraints
+1. **Neural Sound pattern Detection**: Transformer-based phonetic similarity models
+2. **Semantic Preservation**: Maintain meaning while applying sound pattern constraints
 3. **Style Transfer**: Generate poetry in specific traditional forms
 4. **Multimodal Integration**: Combine text analysis with audio pronunciation
 
-This comprehensive technical research provides a solid foundation for implementing sophisticated near-rhyme poetry generation systems with practical, tested approaches and modern tools.
+This comprehensive technical research provides a solid foundation for implementing sophisticated assonant-consonant poetry generation systems with practical, tested approaches and modern tools.

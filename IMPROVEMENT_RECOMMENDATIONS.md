@@ -1,19 +1,19 @@
-# Improvement Recommendations for Near-Rhyme Generation
+# Improvement Recommendations for Near-Sound pattern Generation
 
 ## Problem Analysis
-The system is defaulting to exact rhymes despite instructions. This suggests the word "rhyme" itself triggers deeply embedded patterns in the AI model.
+The system is defaulting to identical endings despite instructions. This suggests the word "sound pattern" itself triggers deeply embedded patterns in the AI model.
 
 ## Ranked Recommendations (Best to Worst)
 
-### 1. 🥇 **Eliminate "Rhyme" Terminology Entirely**
+### 1. 🥇 **Eliminate "Sound pattern" Terminology Entirely**
 **Success Potential: 90%**
 
-Replace all instances of "rhyme" with technical sound terminology:
+Replace all instances of "sound pattern" with technical sound terminology:
 ```
-INSTEAD OF: "Write a poem with near rhymes"
+INSTEAD OF: "Write a poem with assonant-consonant patterns"
 USE: "Write a poem where line endings share partial sound patterns through assonance or consonance"
 
-INSTEAD OF: "Don't use exact rhymes"
+INSTEAD OF: "Don't use identical endings"
 USE: "Avoid identical ending sounds"
 ```
 
@@ -95,7 +95,7 @@ Focus on meter over sound:
 
 ## Recommended Combined Approach
 
-### The "No-Rhyme" Protocol (Estimated 95% Success)
+### The "No-Sound pattern" Protocol (Estimated 95% Success)
 
 Combine recommendations 1, 2, and 4:
 
@@ -108,7 +108,7 @@ REQUIRED: Line endings with partial sound overlap through:
 - Assonance: same vowel, different consonant (rain/came)
 - Consonance: same consonant, different vowel (milk/walk)
 
-Do NOT use the word 'rhyme' in your thinking.
+Do NOT use the word 'sound pattern' in your thinking.
 Focus on creating SOUND ECHOES not SOUND MATCHES."
 ```
 
@@ -116,14 +116,14 @@ Focus on creating SOUND ECHOES not SOUND MATCHES."
 
 ### Update CLAUDE.md to:
 
-1. **Remove all instances of "rhyme" from initial prompt**
+1. **Remove all instances of "sound pattern" from initial prompt**
 2. **Use "assonant/consonant word pairs" instead**
 3. **Lead with constraint, not request**
 4. **Add pre-generation banned list**
 
 ### New Validation Instructions:
 
-Instead of checking for "exact rhymes," check for:
+Instead of checking for "identical endings," check for:
 - "Identical ending sounds"
 - "Perfect sound matches"
 - "Complete phonetic alignment"
@@ -145,4 +145,4 @@ If all approaches fail, try:
 find a replacement that shares some but not all sounds."
 ```
 
-This post-generation substitution may bypass the rhyming impulse entirely.
+This post-generation substitution may bypass the sound matching impulse entirely.

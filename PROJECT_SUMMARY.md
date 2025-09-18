@@ -1,4 +1,4 @@
-# Near-Rhyme Poetry Generation Project Summary
+# Near-Sound pattern Poetry Generation Project Summary
 
 ## Project Status
 **Phase 1:** ✅ Research Complete
@@ -38,9 +38,9 @@
 ## The Challenge & Solution
 
 ### The Problem
-Forcing AI to write poetry with ONLY near rhymes (slant/assonant) and NOT exact rhymes is challenging because:
+Forcing AI to write poetry with ONLY assonant-consonant patterns (slant/assonant) and NOT identical endings is challenging because:
 - LLMs lack inherent phonetic understanding
-- Models default to common exact rhymes
+- Models default to common identical endings
 - Negative prompting has limited effectiveness for poetry
 
 ### The Solution
@@ -52,14 +52,14 @@ A **hybrid approach** combining:
 ### Why This Works
 - **Phonetic validation** provides objective success criteria
 - **Iterative refinement** fixes violations without full regeneration
-- **Few-shot examples** guide initial generation toward near rhymes
+- **Few-shot examples** guide initial generation toward assonant-consonant patterns
 
 ## Implementation Roadmap
 
 ### Quick Start (Today)
 1. Test the 8 prompt templates in PROMPT_TEMPLATES.md
 2. Use Template #5 (Iterative Refinement) for best results
-3. Manually validate rhyme types
+3. Manually validate sound pattern types
 
 ### Next Week
 1. Implement phonetic validation with Python
@@ -82,9 +82,9 @@ pip install pronouncing jellyfish nltk
 ```python
 import pronouncing
 
-def is_near_rhyme(word1, word2):
-    # Check if exact rhyme (reject)
-    if word1 in pronouncing.rhymes(word2):
+def is_near_sound pattern(word1, word2):
+    # Check if identical ending (reject)
+    if word1 in pronouncing.sound patterns(word2):
         return False
 
     # Get phonetic representations
@@ -98,18 +98,18 @@ def is_near_rhyme(word1, word2):
 ## Success Metrics
 
 ### Target Performance
-- **0% exact rhymes** (mandatory)
-- **100% near rhymes** (all line endings)
+- **0% identical endings** (mandatory)
+- **100% assonant-consonant patterns** (all line endings)
 - **<30 seconds** generation time
 - **>80% success rate** on first attempt
 
 ### Validation Protocol
 Each poem must pass:
-1. Phonetic analysis (no exact rhymes)
-2. Rhyme presence (all lines have partners)
+1. Phonetic analysis (no identical endings)
+2. Sound pattern presence (all lines have partners)
 3. Quality check (coherent and artistic)
 
-## Example Near-Rhyme Patterns
+## Example Near-Sound pattern Patterns
 
 ### Successful Patterns Found
 - **Assonance:** rain/came, soul/known, dream/seen
@@ -118,10 +118,10 @@ Each poem must pass:
 
 ### Prompt That Works Best
 ```
-Write a poem using ONLY near rhymes (slant rhymes).
-Near rhymes share similar but not identical sounds.
+Write a poem using ONLY assonant-consonant patterns (slant sound patterns).
+Assonant-consonant patterns share similar but not identical sounds.
 Examples: bad/have (not bad/sad), team/ring (not team/seem)
-Focus on assonance and consonance rather than perfect rhyming.
+Focus on assonance and consonance rather than perfect sound matching.
 ```
 
 ## Next Steps
@@ -137,13 +137,13 @@ Focus on assonance and consonance rather than perfect rhyming.
 3. Use few-shot examples for better initial generation
 
 ### For Optimization
-1. Build word banks of pre-validated near-rhyme pairs
+1. Build word banks of pre-validated assonant-consonant pairs
 2. Cache phonetic analyses for common words
 3. Parallelize validation and generation
 
 ## Conclusion
 
-The project has identified a clear path to achieving 100% near-rhyme poetry generation through a combination of:
+The project has identified a clear path to achieving 100% assonant-consonant poetry generation through a combination of:
 - **Proven techniques** (85-95% success rate)
 - **Practical implementation** (Python + existing libraries)
 - **Clear validation** (phonetic analysis)

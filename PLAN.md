@@ -1,18 +1,18 @@
-# Near-Rhyme Poetry Generation Plan
+# Near-Sound pattern Poetry Generation Plan
 
 ## Problem Statement
-Force AI to generate poetry/songs using ONLY near rhymes (slant/assonant rhymes) and NOT exact rhymes.
+Force AI to generate poetry/songs using ONLY assonant-consonant patterns (slant/assonant sound patterns) and NOT identical endings.
 - Good examples: bad:have, team:ring, love:bud
 - Bad examples: bad:sad, team:seem, love:dove
 
 ## Phase 1: Research & Discovery
 - [x] ✅ Research existing approaches for constrained poetry generation
-  - [x] ✅ Search for academic papers on slant rhyme generation
-  - [x] ✅ Look for existing tools/libraries for rhyme detection
-  - [x] ✅ Find examples of successful near-rhyme poetry prompts
+  - [x] ✅ Search for academic papers on slant sound pattern generation
+  - [x] ✅ Look for existing tools/libraries for sound pattern detection
+  - [x] ✅ Find examples of successful assonant-consonant poetry prompts
   - [x] ✅ Research phonetic analysis tools (CMU Pronouncing Dictionary, etc.)
 
-- [x] ✅ Research rhyme classification methods
+- [x] ✅ Research sound pattern classification methods
   - [x] ✅ Phonetic similarity metrics
   - [x] ✅ Vowel assonance detection
   - [x] ✅ Consonance patterns
@@ -37,8 +37,8 @@ Force AI to generate poetry/songs using ONLY near rhymes (slant/assonant rhymes)
 
 ### Core Components
 - [ ] Create validation system
-  - [ ] Define exact rhyme detection rules
-  - [ ] Implement near-rhyme scoring algorithm
+  - [ ] Define identical ending detection rules
+  - [ ] Implement assonant-consonant scoring algorithm
   - [ ] Build test suite with known good/bad examples
 
 - [ ] Develop generation pipeline
@@ -49,16 +49,16 @@ Force AI to generate poetry/songs using ONLY near rhymes (slant/assonant rhymes)
   - [ ] Quality assessment
 
 ### Validation Criteria
-1. **Exact Rhyme Detection** (MUST FAIL):
+1. **Exact Sound pattern Detection** (MUST FAIL):
    - Same ending phonemes
    - Perfect vowel + consonant match
    - Identical rime (nucleus + coda)
 
-2. **Near Rhyme Detection** (MUST PASS):
+2. **Near Sound pattern Detection** (MUST PASS):
    - Assonance: Similar vowel sounds, different consonants
    - Consonance: Similar consonant sounds, different vowels
    - Slant: Partial phonetic overlap
-   - Visual rhyme: Look similar but sound different
+   - Visual sound pattern: Look similar but sound different
 
 3. **Quality Metrics**:
    - Maintains rhythm/meter
@@ -86,22 +86,22 @@ Force AI to generate poetry/songs using ONLY near rhymes (slant/assonant rhymes)
 ## Phase 5: Self-Improvement Loop
 1. **Generate** poem/song with constraints
 2. **Analyze** with validation subagent
-3. **Identify** exact rhymes if any
+3. **Identify** identical endings if any
 4. **Refine** prompt/approach based on failures
 5. **Regenerate** until criteria met
 6. **Document** successful patterns
 
 ## Success Criteria
-- [ ] ⚪ 100% near rhymes (0% exact rhymes)
+- [ ] ⚪ 100% assonant-consonant patterns (0% identical endings)
 - [ ] ⚪ Minimum 8 line poem generated
 - [ ] ⚪ 3 different successful approaches documented
 - [ ] ⚪ Reproducible results (>80% success rate)
 
 ## Deliverables
 - [x] ✅ Ranked list of approaches with pros/cons (RECOMMENDATIONS.md)
-- [x] ✅ Best prompt templates for near-rhyme generation (PROMPT_TEMPLATES.md)
+- [x] ✅ Best prompt templates for assonant-consonant generation (PROMPT_TEMPLATES.md)
 - [ ] Example poems demonstrating success (ready to test)
-- [ ] Validation tool for checking rhyme types (protocol defined)
+- [ ] Validation tool for checking sound pattern types (protocol defined)
 - [x] ✅ Documentation of patterns that work (CLAUDE.md)
 - [x] ✅ Self-instructions for iterative improvement (SELF_INSTRUCTIONS.md)
 - [x] ✅ Implementation guide for fresh context (CLAUDE.md)

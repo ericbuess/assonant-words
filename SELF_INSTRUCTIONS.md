@@ -1,17 +1,17 @@
-# Self-Instructions for Near-Rhyme Poetry Generation
+# Self-Instructions for Near-Sound pattern Poetry Generation
 
 ## Core Objective
-Generate poetry using ONLY near rhymes (slant/assonant) with 0% exact rhymes while maintaining high artistic quality.
+Generate poetry using ONLY assonant-consonant patterns (slant/assonant) with 0% identical endings while maintaining high artistic quality.
 
 ## Iterative Improvement Protocol
 
 ### Step 1: Initial Generation Attempt
 ```
 1. Use this prompt template:
-   "Write an 8-line poem about [TOPIC] using ONLY near rhymes.
-   Near rhymes share similar but not identical sounds.
-   Examples of GOOD near rhymes: bad/have, team/ring, love/bud
-   NEVER use exact rhymes like: bad/sad, team/seem, love/dove
+   "Write an 8-line poem about [TOPIC] using ONLY assonant-consonant patterns.
+   Assonant-consonant patterns share similar but not identical sounds.
+   Examples of GOOD assonant-consonant patterns: bad/have, team/ring, love/bud
+   NEVER use identical endings like: bad/sad, team/seem, love/dove
    Focus on assonance (similar vowels) and consonance (similar consonants)."
 
 2. Generate initial poem
@@ -21,11 +21,11 @@ Generate poetry using ONLY near rhymes (slant/assonant) with 0% exact rhymes whi
 ### Step 2: Validation Using Subagent
 ```
 INSTRUCTION TO SUBAGENT:
-"Analyze this poem for rhyme types. For each rhyme pair:
-1. Identify the rhyming words
-2. Classify as: exact rhyme, near rhyme, or no rhyme
-3. For near rhymes, specify type (assonance/consonance/slant)
-4. Flag ANY exact rhymes as VIOLATIONS
+"Analyze this poem for sound pattern types. For each sound pattern pair:
+1. Identify the sound matching words
+2. Classify as: identical ending, assonant-consonant pattern, or no sound pattern
+3. For assonant-consonant patterns, specify type (assonance/consonance/slant)
+4. Flag ANY identical endings as VIOLATIONS
 5. Score overall compliance (0-100%)"
 ```
 
@@ -38,14 +38,14 @@ for iteration in range(1, 6):
         break
 
     # Identify violations
-    exact_rhymes = find_exact_rhymes(poem)
+    exact_sound patterns = find_exact_sound patterns(poem)
 
     # Generate replacements
-    for rhyme_pair in exact_rhymes:
+    for sound pattern_pair in exact_sound patterns:
         new_line = regenerate_with_constraint(
             original_line,
-            avoid_rhyme=exact_rhyme_word,
-            target_near_rhyme=True
+            avoid_sound pattern=exact_sound pattern_word,
+            target_near_sound pattern=True
         )
 
     # Re-validate
@@ -55,8 +55,8 @@ for iteration in range(1, 6):
 ### Step 4: Quality Assessment
 ```
 QUALITY CHECKLIST:
-□ No exact rhymes present (MANDATORY)
-□ All line endings have near-rhyme relationships
+□ No identical endings present (MANDATORY)
+□ All line endings have assonant-consonant relationships
 □ Maintains consistent meter/rhythm
 □ Semantically coherent
 □ Artistically pleasing
@@ -65,14 +65,14 @@ QUALITY CHECKLIST:
 
 ## Validation Rules
 
-### MUST REJECT (Exact Rhymes):
+### MUST REJECT (Exact Sound patterns):
 ```
 - Same ending phonemes: cat/bat, love/dove, night/light
 - Perfect vowel+consonant match: team/seem, rain/pain
 - Identical rime: day/way, blue/true
 ```
 
-### MUST ACCEPT (Near Rhymes):
+### MUST ACCEPT (Near Sound patterns):
 ```
 - Assonance: bad/have (same vowel, different consonant)
 - Consonance: milk/walk (same consonant, different vowel)
@@ -86,7 +86,7 @@ QUALITY CHECKLIST:
 
 1. **Pre-Generation Setup**
    ```
-   - Load example near-rhyme pairs
+   - Load example assonant-consonant pairs
    - Prepare validation subagent
    - Set iteration counter to 0
    ```
@@ -100,7 +100,7 @@ QUALITY CHECKLIST:
 
 3. **Validation Phase**
    ```
-   - Extract all rhyme pairs
+   - Extract all sound pattern pairs
    - Check each against CMU Dictionary
    - Calculate phonetic similarity
    - Flag violations
@@ -118,8 +118,8 @@ QUALITY CHECKLIST:
 5. **Success Criteria**
    ```
    SUCCESS when ALL true:
-   - Zero exact rhymes detected
-   - All lines have near-rhyme partners
+   - Zero identical endings detected
+   - All lines have assonant-consonant partners
    - Quality score >= 7/10
    - Completed within 5 iterations
    ```
@@ -130,22 +130,22 @@ QUALITY CHECKLIST:
 
 #### Fallback A: Enhanced Few-Shot
 ```
-1. Provide 5 complete example poems with only near rhymes
-2. Explicitly annotate each rhyme type
+1. Provide 5 complete example poems with only assonant-consonant patterns
+2. Explicitly annotate each sound pattern type
 3. Generate new poem following examples
 ```
 
 #### Fallback B: Word Substitution
 ```
-1. Generate poem with any rhymes
-2. Create substitution map for exact rhymes
+1. Generate poem with any sound patterns
+2. Create substitution map for identical endings
 3. Replace with phonetically similar words
 4. Adjust grammar as needed
 ```
 
 #### Fallback C: Template-Based
 ```
-1. Use pre-validated near-rhyme word banks
+1. Use pre-validated assonant-consonant word banks
 2. Fill template maintaining meaning
 3. Ensure grammatical correctness
 ```
@@ -155,22 +155,22 @@ QUALITY CHECKLIST:
 ### Test Case 1: Basic Validation
 ```
 Generate: 8-line poem about nature
-Validate: Check all rhyme pairs
-Expected: 0% exact rhymes, 100% near rhymes
+Validate: Check all sound pattern pairs
+Expected: 0% identical endings, 100% assonant-consonant patterns
 ```
 
 ### Test Case 2: Complex Topic
 ```
 Generate: 12-line poem about technology
-Validate: Rhyme types + quality
+Validate: Sound pattern types + quality
 Expected: Maintains constraints with abstract topic
 ```
 
-### Test Case 3: Specific Rhyme Scheme
+### Test Case 3: Specific Sound pattern Scheme
 ```
-Generate: ABAB rhyme scheme with near rhymes only
-Validate: Pattern adherence + rhyme types
-Expected: Correct pattern, all near rhymes
+Generate: ABAB sound pattern scheme with assonant-consonant patterns only
+Validate: Pattern adherence + sound pattern types
+Expected: Correct pattern, all assonant-consonant patterns
 ```
 
 ## Performance Tracking
@@ -180,8 +180,8 @@ Expected: Correct pattern, all near rhymes
 {
   "attempt_number": 1,
   "iterations_needed": 3,
-  "exact_rhymes_found": 0,
-  "near_rhymes_found": 4,
+  "exact_sound patterns_found": 0,
+  "near_sound patterns_found": 4,
   "quality_score": 8.5,
   "time_elapsed": 25,
   "success": true
@@ -190,7 +190,7 @@ Expected: Correct pattern, all near rhymes
 
 ## Common Patterns That Work
 
-### Successful Near-Rhyme Endings:
+### Successful Near-Sound pattern Endings:
 ```
 -ove / -ud (love/bud)
 -eam / -ing (dream/ring)
@@ -202,7 +202,7 @@ Expected: Correct pattern, all near rhymes
 ### Prompt Modifications That Help:
 ```
 1. "Focus on vowel similarity over consonant matching"
-2. "Use Emily Dickinson-style slant rhymes"
+2. "Use Emily Dickinson-style slant sound patterns"
 3. "Prioritize meaning over perfect sound matching"
 4. "Think of words that sound similar but not identical"
 ```
@@ -219,7 +219,7 @@ Expected: Correct pattern, all near rhymes
 2. Preserve original semantic content
 3. Only change final word of lines
 
-### If No Near-Rhymes Found:
+### If No Near-Sound patterns Found:
 1. Expand vocabulary search
 2. Use synonym databases
 3. Consider compound words or phrases
@@ -227,8 +227,8 @@ Expected: Correct pattern, all near rhymes
 ## Final Validation Checklist
 
 Before marking as complete:
-- [ ] Run phonetic analysis on all rhyme pairs
-- [ ] Confirm 0% exact rhymes
+- [ ] Run phonetic analysis on all sound pattern pairs
+- [ ] Confirm 0% identical endings
 - [ ] Verify semantic coherence
 - [ ] Check meter consistency
 - [ ] Validate against test suite
@@ -237,8 +237,8 @@ Before marking as complete:
 ## Success Declaration
 
 Only declare success when:
-1. Validation subagent confirms 100% near rhymes
-2. No exact rhymes detected by phonetic analysis
+1. Validation subagent confirms 100% assonant-consonant patterns
+2. No identical endings detected by phonetic analysis
 3. Poem maintains artistic quality
 4. Results are reproducible
 

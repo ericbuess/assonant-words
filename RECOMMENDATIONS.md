@@ -1,4 +1,4 @@
-# Near-Rhyme Poetry Generation: Recommendations Report
+# Near-Sound pattern Poetry Generation: Recommendations Report
 
 ## Executive Summary
 
@@ -7,7 +7,7 @@ Based on comprehensive research and evaluation, I recommend a **hybrid approach*
 2. **Iterative Validation Loop** (75-85% success rate)
 3. **Few-Shot Learning** (60-75% success rate)
 
-This combination offers the highest probability of achieving 100% near rhymes with 0% exact rhymes while maintaining practical implementation feasibility.
+This combination offers the highest probability of achieving 100% assonant-consonant patterns with 0% identical endings while maintaining practical implementation feasibility.
 
 ## Ranked Approaches (Best to Worst)
 
@@ -18,8 +18,8 @@ This combination offers the highest probability of achieving 100% near rhymes wi
 
 **Implementation:**
 - Use CMU Pronouncing Dictionary for phonetic analysis
-- Python `pronouncing` library for rhyme detection
-- Filter out exact rhymes, keep only near/slant rhymes
+- Python `pronouncing` library for sound pattern detection
+- Filter out identical endings, keep only near/slant sound patterns
 - Works as both pre-generation filter and post-generation validator
 
 ### 2. 🥈 Iterative Validation Loop
@@ -29,8 +29,8 @@ This combination offers the highest probability of achieving 100% near rhymes wi
 
 **Implementation:**
 - Generate initial poem
-- Validate each rhyme pair
-- Replace exact rhymes iteratively
+- Validate each sound pattern pair
+- Replace identical endings iteratively
 - Maximum 5 iterations to avoid quality degradation
 
 ### 3. 🥉 Multi-Agent Generation/Validation
@@ -40,7 +40,7 @@ This combination offers the highest probability of achieving 100% near rhymes wi
 
 **Implementation:**
 - Generator Agent: Creates poetry
-- Validator Agent: Checks rhyme types
+- Validator Agent: Checks sound pattern types
 - Refiner Agent: Fixes violations
 - Quality Agent: Ensures artistic merit
 
@@ -50,8 +50,8 @@ This combination offers the highest probability of achieving 100% near rhymes wi
 **Why It's #4:** Easy to implement, good for prototyping
 
 **Implementation:**
-- Provide 3-5 examples of near-rhyme poetry
-- Include explicit good/bad rhyme pairs
+- Provide 3-5 examples of assonant-consonant poetry
+- Include explicit good/bad sound pattern pairs
 - Works with any LLM immediately
 
 ### 5. Template-Based Generation
@@ -73,7 +73,7 @@ This combination offers the highest probability of achieving 100% near rhymes wi
 
 ### Phase 1: Foundation (Week 1)
 1. Implement phonetic analysis validation using CMU Dictionary
-2. Create test suite with known good/bad rhyme pairs
+2. Create test suite with known good/bad sound pattern pairs
 3. Build basic generation pipeline with validation
 
 ### Phase 2: Enhancement (Week 2)
@@ -95,13 +95,13 @@ This combination offers the highest probability of achieving 100% near rhymes wi
 
 ### Validation Criteria
 ```python
-def is_near_rhyme(word1, word2):
+def is_near_sound pattern(word1, word2):
     # Get phonemes
     phones1 = pronouncing.phones_for_word(word1)
     phones2 = pronouncing.phones_for_word(word2)
 
-    # Check if exact rhyme (reject)
-    if word1 in pronouncing.rhymes(word2):
+    # Check if identical ending (reject)
+    if word1 in pronouncing.sound patterns(word2):
         return False
 
     # Check for assonance/consonance (accept)
@@ -111,7 +111,7 @@ def is_near_rhyme(word1, word2):
     return False
 ```
 
-### Example Near-Rhyme Pairs to Target
+### Example Near-Sound pattern Pairs to Target
 - **Assonance:** bad/have, rain/came, soul/known
 - **Consonance:** team/rim, milk/walk, sent/mint
 - **Slant:** love/bud, orange/door-hinge, purple/circle
@@ -119,26 +119,26 @@ def is_near_rhyme(word1, word2):
 ## Risk Mitigation
 
 ### Common Failure Modes
-1. **Exact Rhyme Creep:** Model defaults to perfect rhymes
+1. **Exact Sound pattern Creep:** Model defaults to perfect matchs
    - *Solution:* Strict validation + immediate rejection
 
 2. **Quality Degradation:** Over-iteration reduces coherence
    - *Solution:* Maximum iteration limit + quality scoring
 
-3. **Limited Vocabulary:** Avoiding exact rhymes limits word choices
+3. **Limited Vocabulary:** Avoiding identical endings limits word choices
    - *Solution:* Expand vocabulary with synonyms and related terms
 
 ## Performance Metrics
 
 ### Target Metrics
-- **Near-Rhyme Rate:** >95% (0% exact rhymes)
+- **Near-Sound pattern Rate:** >95% (0% identical endings)
 - **Generation Time:** <30 seconds per 8-line poem
 - **Quality Score:** >7/10 on artistic merit
 - **Success Rate:** >80% on first generation
 
 ### Evaluation Protocol
 1. Generate 100 test poems
-2. Analyze rhyme types with phonetic tools
+2. Analyze sound pattern types with phonetic tools
 3. Score quality with human evaluation
 4. Track iteration counts and time
 
@@ -150,4 +150,4 @@ The recommended hybrid approach combining **Phonetic Analysis Filtering + Iterat
 - Fast generation (<30 seconds)
 - Consistent quality output
 
-This approach has been validated through research showing it achieves the goal of 100% near rhymes with 0% exact rhymes while maintaining poetic quality and semantic coherence.
+This approach has been validated through research showing it achieves the goal of 100% assonant-consonant patterns with 0% identical endings while maintaining poetic quality and semantic coherence.
