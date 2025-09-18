@@ -106,7 +106,7 @@ INSTRUCTION TEMPLATE:
 FORBIDDEN: Line endings with identical sounds (cat/bat, love/dove)
 REQUIRED: Line endings with partial sound overlap through:
 - Assonance: same vowel, different consonant (rain/came)
-- Consonance: same consonant, different vowel (milk/walk)
+- Consonance: same consonant, different vowel (break/trick)
 
 Do NOT use the word 'sound pattern' in your thinking.
 Focus on creating SOUND ECHOES not SOUND MATCHES."

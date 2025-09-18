@@ -75,7 +75,7 @@ QUALITY CHECKLIST:
 ### MUST ACCEPT (Near Sound patterns):
 ```
 - Assonance: bad/have (same vowel, different consonant)
-- Consonance: milk/walk (same consonant, different vowel)
+- Consonance: break/trick (same consonant, different vowel)
 - Slant: love/bud (partial phonetic overlap)
 - Visual: cough/through (look similar, sound different)
 ```

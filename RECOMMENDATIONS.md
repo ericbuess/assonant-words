@@ -113,7 +113,7 @@ def is_near_sound pattern(word1, word2):
 
 ### Example Near-Sound pattern Pairs to Target
 - **Assonance:** bad/have, rain/came, soul/known
-- **Consonance:** team/rim, milk/walk, sent/mint
+- **Consonance:** team/rim, break/trick, sent/mint
 - **Slant:** love/bud, orange/door-hinge, purple/circle
 
 ## Risk Mitigation

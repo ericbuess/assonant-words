@@ -178,7 +178,7 @@ Avoid perfect matchs. Use subtle sound connections instead.
 Write a poem about [TOPIC] that uses interesting sound patterns but avoids obvious perfect matchs.
 Instead of sound matching "day/way" or "love/dove", use more subtle connections like:
 - Assonance: similar vowel sounds (home/stone)
-- Consonance: similar consonant endings (milk/walk)
+- Consonance: similar consonant endings (break/trick)
 - Slant sound patterns: partial sound matches (mind/kind becomes mind/send)
 ```
 

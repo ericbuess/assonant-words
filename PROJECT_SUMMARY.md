@@ -113,7 +113,7 @@ Each poem must pass:
 
 ### Successful Patterns Found
 - **Assonance:** rain/came, soul/known, dream/seen
-- **Consonance:** milk/walk, sent/mint, break/brick
+- **Consonance:** break/trick, sent/mint, break/brick
 - **Slant:** love/bud, orange/forage, purple/thermal
 
 ### Prompt That Works Best

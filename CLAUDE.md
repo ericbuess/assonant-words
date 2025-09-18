@@ -80,13 +80,13 @@ FORBIDDEN: Line endings with identical sounds (cat/bat, night/light, love/dove)
 
 REQUIRED: Line endings must have partial sound overlap through:
 - Assonance: same vowel sound, different consonant (rain/came, soul/home)
-- Consonance: similar consonant, different vowel (milk/walk, break/trick)
+- Consonance: similar consonant, different vowel (break/trick, sent/mint)
 - Slant pairing: partial phonetic overlap (orange/door-hinge)
 
 Create SOUND ECHOES not SOUND MATCHES.
 Each line-ending word must share some phonetic elements with its pair, but NOT all.
 
-Examples of good partial overlaps: mind/wind, love/live, dream/drum
+Examples of good partial overlaps: love/live, dream/drum, stone/moon
 Examples of forbidden identical endings: mind/find, love/dove, dream/cream
 ```
 
@@ -176,8 +176,8 @@ if iteration == 5 and compliance_score < 100:
 
 ### MUST ACCEPT - Near Sound patterns:
 - **Assonance**: bad/have, rain/came, soul/known
-- **Consonance**: team/ring, milk/walk, sent/mint
-- **Slant**: love/bud, mind/wind, orange/forage
+- **Consonance**: team/ring, sent/mint, break/trick
+- **Slant**: love/bud, orange/forage, purple/thermal
 
 ## Quick Phonetic Check Method
 
@@ -281,11 +281,11 @@ Generate 10 poems, track:
 ## Ready-to-Use Word Banks
 
 ### Strong Near-Sound pattern Pairs:
-- mind/wind, find/signed
+- love/live, find/signed
 - soul/cold, hole/pull
 - break/brick, speak/weak
 - dream/trim, seem/dim
-- heart/start, part/hurt
+- heart/hurt, part/dark
 
 ### Avoid These Exact Sound patterns:
 - cat/bat, rat/hat

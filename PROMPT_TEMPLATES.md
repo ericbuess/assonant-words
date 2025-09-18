@@ -62,7 +62,7 @@ FORBIDDEN sound pattern types:
 
 ENCOURAGED connections:
 - Assonance: home/stone (similar vowels)
-- Consonance: milk/walk (similar consonants)
+- Consonance: break/trick (similar consonants)
 - Slant sound patterns: mind/send (partial overlap)
 - Visual sound patterns: love/move (look similar, sound different)
 
